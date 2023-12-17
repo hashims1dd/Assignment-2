@@ -28,3 +28,36 @@ for i in range(0, len(numbers)):
         print(numbers[i])
     
 
+count = 0
+
+while count < len(numbers):
+    if numbers[count] == 237:
+        break
+    if numbers[count]%2 == 0:
+        print(numbers[count])
+    count += 1        
+
+# ------------------------------------------------------------
+# Global variables
+# ------------------------------------------------------------
+count = 1
+number = 1
+# ------------------------------------------------------------
+# Main program
+# ------------------------------------------------------------
+number = int(input ("Enter a number 1 to 12: "))
+
+# =====> Complete the brackets
+if number < 1:
+    print("Number is too small")
+# =====> Complete the brackets
+elif number > 12:
+    print("Number is too large")
+else:
+    # =====> Complete the brackets
+    while count <= 12:
+        #printiing tabel of given numbeer 
+        print(str(number) + " x " + str(count) + " = " + str(count * number))
+        # =====> Add a line to keep the loop going around
+        count +=1
+
