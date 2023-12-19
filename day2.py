@@ -12,7 +12,7 @@ list2 = [2, 4, 6, 8]
 
 for i in list1:
     for j in list2:
-        if i == j:
-            list1.remove(i)
+        if i == j: # checks if both elements are the same
+            list1.remove(i) # removes the elements that are the same
 
 print(f"The new list is {list1}")
