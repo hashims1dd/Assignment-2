@@ -45,7 +45,7 @@ def fun_y(list2):
         if j[0] == 'A':
             c3 +=1
             
-            if all(j[-1]) == 'E':
+            if j[-1) == 'E':
                 c4 +=1
 
     return c3, c4
