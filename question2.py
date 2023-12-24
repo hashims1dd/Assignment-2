@@ -5,47 +5,35 @@ Sample Data:
 ([3, 5, 7, 13]) -> True
 ([1, 5, 3]) -> False
 '''
-
-tuple1 = (0,3,4,7,9)
-tuple2 = (3,5,7,13)
-tuple3 = (1,5,3)
+import math
+tuple1 = (3, 5, 7, 13)
 
 
 def fun_x(tuple1):
-
-
-    for i1 in range(0, len(tuple1)):
-        x = tuple1[i1]%2
-        if x == 5:
-            return True
-        else:
-            return False
-
-
-def fun_y(tuple2):
-
-
-    for i2 in range(0, len(tuple2)):
-        y = tuple2[i2]%2
-        if y == 5:
-            return True
-        else:
-            return False
-
-
-def fun_z(tuple3):
-
-
-    for i3 in range(0, len(tuple3)):
-        z = tuple3[i3]%2
-        if z == 5:
-            return True
-        else:
+    is_prime=False
+    for i in range(0, len(tuple1)):
+        is_prime=check_prime_number(tuple1[i])
+        print(tuple1[i],is_prime)
+        
+        if not is_prime:
             return False
         
-    # I know half of 1 is 0.5, but its still returning False
+    if is_prime:
+            return True
+            
+            
+def check_prime_number(num):
+    if num < 2:
+        return False
+    
+    for i in range(2, math.isqrt(num) + 1):
+        if num % i == 0:
+            return False
+    return True
+        
+            
+            
 
         
 print(fun_x(tuple1))
-print(fun_y(tuple2))
-print(fun_z(tuple3))
+
