@@ -75,7 +75,7 @@ def showAverage (pList):
 showAverage (totalSold)
 showAverage (costCaravan)
 print ("Goodbye")
-'''
+
 
 
 # Homework Activity 2
@@ -105,4 +105,48 @@ def error_count(messages,target):
 
 error_count(messages,'Error')
 error_count(weeklyStats,0)
+'''
 
+# Homework Activity 1
+# ------------------------------------------------------------
+# Global variables
+# ------------------------------------------------------------
+weeklyStats = [23, 15, 6, 5, 2, 0, 0,
+               19, 15, 7, 3, 0, 3, 3]
+
+# ------------------------------------------------------------
+# Subprograms
+# ------------------------------------------------------------
+# =====> Write a definition for a subprogram named 'genStats'.
+#        It has one input parameter named 'pList'.
+def genStats(pList):
+    min = 9999
+    max = 0
+    total = 0
+    average = 0.0
+
+    # ====> Write a 'for in list' loop to iterate over
+    #       the input list.
+    for item in pList:
+        total = total + item
+        if (item < min):
+            min = item
+        if (item > max):
+            max = item
+
+    # =====> Calculate the average based on 'total' and
+    #        the length of the input list.
+    #ive forgotten how to calculate
+    #avg=(12+1+2)/3
+    
+    average = total/len(pList)
+
+    print ("Min:", min, "Max:", max, "Average:","{:.2f}".format(average))
+
+# ------------------------------------------------------------
+# Main program
+# ------------------------------------------------------------
+# =====> Write a call to 'genStats' sending 'weeklyStats' as
+#        the argument
+
+genStats(weeklyStats)
